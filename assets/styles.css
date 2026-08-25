@@ -1,13 +1,13 @@
 :root {
-  --navy: #10253f;
-  --navy-2: #173d66;
+  --navy: #1e293b;
+  --navy-2: #26364f;
   --blue: #0b66c3;
   --blue-2: #2e8ed8;
   --blue-soft: #e8f3ff;
   --teal: #2dd4bf;
   --teal-dark: #0f8f85;
   --teal-soft: #dff8f4;
-  --ink: #10253f;
+  --ink: #1e293b;
   --text: #52677d;
   --muted: #718196;
   --line: #d8e4ee;
@@ -312,4 +312,49 @@ button, a, input, select, textarea, summary { -webkit-tap-highlight-color: trans
   .footer-brand { grid-column: auto; }
   .form-actions .btn { width: 100%; }
   .role-search { max-width: 100%; }
+}
+
+
+/* Photorealistic recruiting imagery */
+.hero-art img,
+.page-hero-art img,
+.visual-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center;
+  background: #eef4f9;
+}
+.hero-art img { min-height: 440px; object-position: center 38%; }
+.page-hero-art img { min-height: 360px; }
+.visual-card img { min-height: 350px; }
+
+/* WhatsApp quick contact */
+.whatsapp-fab {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 80;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 52px;
+  padding: 10px 16px 10px 11px;
+  border-radius: 999px;
+  background: #25d366;
+  color: #fff;
+  font-size: .86rem;
+  font-weight: 850;
+  box-shadow: 0 14px 34px rgba(30,41,59,.22);
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+.whatsapp-fab:hover { color: #fff; transform: translateY(-2px); box-shadow: 0 18px 38px rgba(30,41,59,.28); }
+.whatsapp-fab svg { width: 30px; height: 30px; flex: 0 0 30px; color: #fff; }
+
+@media (max-width: 720px) {
+  .hero-art img { min-height: 310px; }
+  .page-hero-art img, .visual-card img { min-height: 280px; }
+  .whatsapp-fab { right: 14px; bottom: 14px; width: 52px; height: 52px; min-height: 52px; padding: 10px; justify-content: center; }
+  .whatsapp-fab span { display: none; }
 }

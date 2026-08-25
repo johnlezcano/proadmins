@@ -93,7 +93,7 @@
       }
 
       if (!endpoint) {
-        setStatus('Form routing is not connected yet. Please email contact@proadmins.io or call (631) 877-1393 for now.', 'error');
+        setStatus('Form routing is not connected yet. Please email contact@proadmins.io, call (631) 877-1393, or message us on WhatsApp for now.', 'error');
         return;
       }
 
@@ -114,7 +114,7 @@
         leadForm.reset();
         setStatus('Thanks. Your hiring request was sent to ProAdmins. We will be in touch soon.', 'success');
       } catch (error) {
-        setStatus('Something went wrong. Please try again or email contact@proadmins.io.', 'error');
+        setStatus('Something went wrong. Please try again, email contact@proadmins.io, or message us on WhatsApp.', 'error');
       } finally {
         if (submitButton) {
           submitButton.disabled = false;

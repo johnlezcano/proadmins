@@ -21,7 +21,8 @@ Complete static rebuild for ProAdmins.io.
 * Redirects from several old ProAdmins URLs
 * Supplied ProAdmins logo variants
 * Capital Generations parent brand logo and relationship
-* Original recruiting and remote work illustrations
+* Photorealistic AI generated recruiting and remote work imagery
+* Sitewide WhatsApp contact button for +1 631 877 1393
 
 ## Current business model shown on the website
 
@@ -82,7 +83,7 @@ data-endpoint=""
 
 Replace it with the actual Formspree endpoint.
 
-Until an endpoint is connected, the form displays a message directing visitors to contact@proadmins.io or (631) 877-1393.
+Until an endpoint is connected, the form displays a message directing visitors to contact@proadmins.io, (631) 877-1393 or WhatsApp.
 
 ## Google Analytics
 
@@ -117,3 +118,8 @@ ProAdmins remains the primary brand. Capital Generations appears as the parent b
 4. Add Google Analytics if desired.
 5. Verify Search Console and submit the sitemap after launch.
 6. Only then change website DNS records to Vercel.
+
+
+## WhatsApp
+
+A small floating WhatsApp button appears sitewide and opens a chat to +1 631 877 1393 with a short prefilled hiring message. The contact page and footer also include WhatsApp access.
