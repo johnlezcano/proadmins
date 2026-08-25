@@ -306,7 +306,7 @@ button, a, input, select, textarea, summary { -webkit-tap-highlight-color: trans
   .page-hero-art, .hero-art, .shortlist-panel { max-width: 100%; }
   .candidate-grid { grid-template-columns: 1fr; }
   .candidate-card { display: grid; grid-template-columns: 118px 1fr; }
-  .candidate-card img { height: 100%; min-height: 180px; aspect-ratio: auto; }
+  .candidate-card img { width:100%; height:auto; min-height:0; aspect-ratio:4 / 5; object-fit:contain; }
   .hero-art .floating-note { position: static; margin-top: 12px; }
 }
 
@@ -325,9 +325,10 @@ button, a, input, select, textarea, summary { -webkit-tap-highlight-color: trans
 .shortlist-head .eyebrow { margin-bottom: 8px; }
 .shortlist-head h2 { margin: 0; color: var(--navy); font-size: clamp(1.45rem,2.2vw,2rem); line-height: 1.08; letter-spacing: -.035em; }
 .shortlist-head > p:not(.eyebrow) { margin: 8px 0 0; color: var(--text); font-size: .9rem; line-height: 1.5; }
-.candidate-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
+.candidate-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; align-items: start; }
 .candidate-card { overflow: hidden; border: 1px solid #cfe0ee; border-radius: 18px; background: #fff; box-shadow: 0 8px 20px rgba(16,37,63,.06); }
-.candidate-card img { width: 100%; aspect-ratio: 1.35 / 1; object-fit: cover; object-position: center 30%; background: var(--soft); }
+/* Supplied candidate portraits are 4:5. Preserve that ratio instead of cropping them into landscape boxes. */
+.candidate-card img { display:block; width:100%; height:auto; aspect-ratio:4 / 5; object-fit:contain; object-position:center; background:var(--soft); }
 .candidate-copy { padding: 15px; }
 .candidate-tag { display: inline-flex; padding: 4px 8px; border-radius: 999px; background: var(--teal-soft); color: var(--teal-dark); font-size: .66rem; font-weight: 850; text-transform: uppercase; letter-spacing: .055em; }
 .candidate-copy h3 { margin: 9px 0 5px; color: var(--navy); font-size: 1rem; line-height: 1.15; }
@@ -336,20 +337,26 @@ button, a, input, select, textarea, summary { -webkit-tap-highlight-color: trans
 .candidate-copy li { position: relative; padding-left: 15px; color: var(--text); font-size: .72rem; line-height: 1.35; }
 .candidate-copy li::before { content: "✓"; position: absolute; left: 0; color: var(--teal-dark); font-weight: 900; }
 
-/* Photorealistic recruiting imagery */
+/* Supplied recruiting imagery: preserve each file's real aspect ratio. */
 .hero-art img,
 .page-hero-art img,
 .visual-card img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 3 / 2;
-  object-fit: cover;
-  object-position: center;
-  background: #eef4f9;
+  display:block;
+  width:100%;
+  height:auto;
+  min-height:0;
+  aspect-ratio:auto;
+  object-fit:contain;
+  object-position:center;
+  background:#eef4f9;
 }
-.hero-art img { min-height: 440px; object-position: center 38%; }
-.page-hero-art img { min-height: 360px; }
-.visual-card img { min-height: 350px; }
+.page-hero-art { align-self:center; }
+.page-hero-art.portrait-art { max-width:460px; justify-self:end; }
+.page-hero-art.portrait-art img { aspect-ratio:4 / 5; }
+.page-hero-art.wide-art img { aspect-ratio:16 / 9; }
+.page-hero-art.standard-art img,
+.visual-card.standard-art img { aspect-ratio:3 / 2; }
+.visual-card.wide-art img { aspect-ratio:16 / 9; }
 
 /* WhatsApp quick contact */
 .whatsapp-fab {
@@ -374,8 +381,8 @@ button, a, input, select, textarea, summary { -webkit-tap-highlight-color: trans
 .whatsapp-fab svg { width: 30px; height: 30px; flex: 0 0 30px; color: #fff; }
 
 @media (max-width: 720px) {
-  .hero-art img { min-height: 310px; }
-  .page-hero-art img, .visual-card img { min-height: 280px; }
+  .hero-art img, .page-hero-art img, .visual-card img { min-height:0; }
+  .page-hero-art.portrait-art { max-width:390px; justify-self:center; }
   .whatsapp-fab { right: 14px; bottom: 14px; width: 52px; height: 52px; min-height: 52px; padding: 10px; justify-content: center; }
   .whatsapp-fab span { display: none; }
 }
