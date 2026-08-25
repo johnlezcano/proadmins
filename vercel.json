@@ -1,0 +1,15 @@
+{
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/services", "destination": "/hire-talent/", "permanent": true },
+    { "source": "/services/", "destination": "/hire-talent/", "permanent": true },
+    { "source": "/pricing", "destination": "/hire-talent/#pricing", "permanent": true },
+    { "source": "/pricing/", "destination": "/hire-talent/#pricing", "permanent": true },
+    { "source": "/starthiring", "destination": "/contact/", "permanent": true },
+    { "source": "/starthiring/", "destination": "/contact/", "permanent": true },
+    { "source": "/findajob", "destination": "/", "permanent": true },
+    { "source": "/findajob/", "destination": "/", "permanent": true },
+    { "source": "/resources", "destination": "/", "permanent": true },
+    { "source": "/resources/", "destination": "/", "permanent": true }
+  ]
+}
