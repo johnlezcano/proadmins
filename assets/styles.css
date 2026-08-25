@@ -379,3 +379,11 @@ button, a, input, select, textarea, summary { -webkit-tap-highlight-color: trans
   .whatsapp-fab { right: 14px; bottom: 14px; width: 52px; height: 52px; min-height: 52px; padding: 10px; justify-content: center; }
   .whatsapp-fab span { display: none; }
 }
+
+/* Non-photo process panels used to keep every supplied photo unique */
+.process-visual-panel{display:flex;align-items:center;justify-content:center;min-height:360px;background:linear-gradient(145deg,#f7fbff,#eef7f6);border:1px solid rgba(30,41,59,.10)}
+.process-visual-inner{max-width:430px;padding:36px}
+.process-visual-inner h3{font-size:1.65rem;margin:18px 0 10px}
+.process-visual-inner p{margin:0 0 20px;color:var(--muted)}
+.direct-hire-panel{background:linear-gradient(145deg,#f8fbff,#f5f7fa)}
+@media(max-width:760px){.process-visual-panel{min-height:auto}.process-visual-inner{padding:28px}}

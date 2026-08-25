@@ -128,3 +128,7 @@ A small floating WhatsApp button appears sitewide and opens a chat to +1 631 877
 ## v4 imagery update
 
 This package keeps the approved ProAdmins logo, existing ProAdmins color system, layout, pricing, WhatsApp contact, and Capital Generations relationship. The homepage now uses three illustrative candidate profile cards. Every other photography slot uses a different image asset, and no site photo is reused in more than one placement.
+
+
+## Approved image set
+This build uses the 11 user supplied website images in `assets/photos/`. Each photograph is used once only. No AI generated placeholder photography is included in the site.
