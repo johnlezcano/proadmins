@@ -1,8 +1,8 @@
 # ProAdmins Website
 
-Complete static website rebuild for ProAdmins.io.
+Complete static rebuild for ProAdmins.io.
 
-## What is included
+## Included
 
 * Responsive homepage
 * Hire Talent page
@@ -14,16 +14,31 @@ Complete static website rebuild for ProAdmins.io.
 * Custom 404 page
 * SEO titles and meta descriptions
 * Canonical tags
-* Open Graph social metadata
+* Open Graph metadata
 * sitemap.xml
 * robots.txt
-* Favicon and social image
+* Favicons and social image
 * Redirects from several old ProAdmins URLs
-* Original supplied ProAdmins logo variants
+* Supplied ProAdmins logo variants
+* Capital Generations parent brand logo and relationship
+* Original recruiting and remote work illustrations
+
+## Current business model shown on the website
+
+* Direct hire recruiting
+* 20% of annual salary placement fee
+* 50% due when the search starts
+* 50% due when the candidate starts work
+* 30 Day Replacement Guarantee
+* Typical first qualified candidates within one week
+* Typical shortlist of two or three finalists
+* Primary talent focus on Latin America
+
+The pricing calculator starts at a $12,000 annual salary example. A nearby note explains that ProAdmins often suggests around $12,000 per year as a starting point for many administrative roles in Latin America, while the hiring company decides the final compensation.
 
 ## Technical approach
 
-This is a plain static website with HTML, CSS and JavaScript. There is no WordPress, framework, build process, package manager or node_modules folder.
+This is a plain static website using HTML, CSS and JavaScript. There is no WordPress, framework, package manager, build process or node_modules folder.
 
 It is intentionally simple for GitHub and Vercel.
 
@@ -31,7 +46,7 @@ It is intentionally simple for GitHub and Vercel.
 
 Put every file and folder in this package at the root of the GitHub repository.
 
-The repository root should look like this:
+The repository root should contain:
 
 ```
 404.html
@@ -47,15 +62,15 @@ how-it-works/
 roles/
 ```
 
-Connect the repository to Vercel. Vercel can serve this project directly as a static site. No build command is required.
+Connect the repository to Vercel. No build command is required.
 
-Do not point ProAdmins.io to the new Vercel deployment until the preview deployment has been reviewed and the existing email DNS records have been confirmed.
+Do not point ProAdmins.io to the new Vercel deployment until the preview has been reviewed and all existing email DNS records have been confirmed.
 
-## Contact form setup still required before production
+## Contact form setup still required
 
-The form design, validation, success state and error state are built. The external form endpoint is intentionally not connected yet because the ProAdmins Formspree endpoint has not been created or supplied.
+The form layout, validation, success state and error state are built. The external endpoint is intentionally blank because a ProAdmins Formspree endpoint has not been supplied yet.
 
-After a Formspree form is created, open:
+Open:
 
 `contact/index.html`
 
@@ -65,19 +80,13 @@ Find:
 data-endpoint=""
 ```
 
-Replace it with the full Formspree endpoint, for example:
+Replace it with the actual Formspree endpoint.
 
-```
-data-endpoint="https://formspree.io/f/yourformid"
-```
-
-Do not use the example endpoint literally.
-
-Until an endpoint is connected, submitting the preview form displays a clear message directing visitors to contact@proadmins.io or (631) 877-1393.
+Until an endpoint is connected, the form displays a message directing visitors to contact@proadmins.io or (631) 877-1393.
 
 ## Google Analytics
 
-GA4 is not installed yet. Add it only after the Measurement ID is confirmed.
+GA4 is not installed yet. Add it after the Measurement ID is confirmed.
 
 ## Google Search Console
 
@@ -87,27 +96,24 @@ The sitemap is ready at:
 
 Submit it after the new production deployment is live and the Search Console property is verified.
 
-## Brand files
+## Brand direction
 
-The supplied ProAdmins PNG files are preserved in `assets/` with clearer names:
+Core colors in this version:
 
-* `proadmins-logo-dark.png`
-* `proadmins-logo-light-teal.png`
-* `proadmins-logo-light.png`
+* ProAdmins navy: `#10253f`
+* ProAdmins blue: `#0b66c3`
+* ProAdmins teal: `#2dd4bf`
+* Light blue: `#e8f3ff`
 
-Core brand colors used in the build:
+The build uses more of the original blue brand direction while keeping teal as the main accent.
 
-* Navy: `#1e293b`
-* Deep navy: `#0f172a`
-* Teal: `#2dd4bf`
+ProAdmins remains the primary brand. Capital Generations appears as the parent brand in a subtle relationship treatment.
 
-## Important production checks
-
-Before replacing the current website:
+## Production checks
 
 1. Review the Vercel preview on desktop, tablet and mobile.
 2. Connect and test Formspree.
 3. Confirm the ProAdmins business email provider and preserve every email DNS record.
-4. Confirm Google Analytics if desired.
-5. Confirm Search Console and submit the sitemap after launch.
-6. Only then change the website DNS records to Vercel.
+4. Add Google Analytics if desired.
+5. Verify Search Console and submit the sitemap after launch.
+6. Only then change website DNS records to Vercel.
