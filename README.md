@@ -123,3 +123,8 @@ ProAdmins remains the primary brand. Capital Generations appears as the parent b
 ## WhatsApp
 
 A small floating WhatsApp button appears sitewide and opens a chat to +1 631 877 1393 with a short prefilled hiring message. The contact page and footer also include WhatsApp access.
+
+
+## v4 imagery update
+
+This package keeps the approved ProAdmins logo, existing ProAdmins color system, layout, pricing, WhatsApp contact, and Capital Generations relationship. The homepage now uses three illustrative candidate profile cards. Every other photography slot uses a different image asset, and no site photo is reused in more than one placement.

@@ -266,7 +266,7 @@ button, a, input, select, textarea, summary { -webkit-tap-highlight-color: trans
   .mobile-nav .btn { margin-top: 8px; }
   .hero-grid, .page-hero .page-hero-grid, .page-hero.narrow .page-hero-grid, .split, .split.reverse, .calculator-wrap, .contact-grid { grid-template-columns: 1fr; gap: 42px; }
   .split.reverse .visual-card { order: 0; }
-  .hero-art, .page-hero-art, .visual-card { max-width: 760px; margin: 0 auto; }
+  .hero-art, .page-hero-art, .visual-card, .shortlist-panel { max-width: 760px; margin: 0 auto; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
   .stat:nth-child(2) { border-right: 0; }
   .stat:nth-child(1), .stat:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,.16); }
@@ -303,7 +303,10 @@ button, a, input, select, textarea, summary { -webkit-tap-highlight-color: trans
   .footer-brand { grid-column: 1 / -1; }
   .footer-col:last-child { grid-column: auto; }
   .footer-bottom { flex-direction: column; }
-  .page-hero-art, .hero-art { max-width: 100%; }
+  .page-hero-art, .hero-art, .shortlist-panel { max-width: 100%; }
+  .candidate-grid { grid-template-columns: 1fr; }
+  .candidate-card { display: grid; grid-template-columns: 118px 1fr; }
+  .candidate-card img { height: 100%; min-height: 180px; aspect-ratio: auto; }
   .hero-art .floating-note { position: static; margin-top: 12px; }
 }
 
@@ -314,6 +317,24 @@ button, a, input, select, textarea, summary { -webkit-tap-highlight-color: trans
   .role-search { max-width: 100%; }
 }
 
+
+
+/* Homepage candidate shortlist */
+.shortlist-panel { padding: 24px; border: 1px solid var(--line); border-radius: var(--radius-lg); background: #fff; box-shadow: var(--shadow); }
+.shortlist-head { margin-bottom: 18px; }
+.shortlist-head .eyebrow { margin-bottom: 8px; }
+.shortlist-head h2 { margin: 0; color: var(--navy); font-size: clamp(1.45rem,2.2vw,2rem); line-height: 1.08; letter-spacing: -.035em; }
+.shortlist-head > p:not(.eyebrow) { margin: 8px 0 0; color: var(--text); font-size: .9rem; line-height: 1.5; }
+.candidate-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
+.candidate-card { overflow: hidden; border: 1px solid #cfe0ee; border-radius: 18px; background: #fff; box-shadow: 0 8px 20px rgba(16,37,63,.06); }
+.candidate-card img { width: 100%; aspect-ratio: 1.35 / 1; object-fit: cover; object-position: center 30%; background: var(--soft); }
+.candidate-copy { padding: 15px; }
+.candidate-tag { display: inline-flex; padding: 4px 8px; border-radius: 999px; background: var(--teal-soft); color: var(--teal-dark); font-size: .66rem; font-weight: 850; text-transform: uppercase; letter-spacing: .055em; }
+.candidate-copy h3 { margin: 9px 0 5px; color: var(--navy); font-size: 1rem; line-height: 1.15; }
+.candidate-copy p { margin: 0; color: var(--text); font-size: .77rem; line-height: 1.42; }
+.candidate-copy ul { margin: 10px 0 0; padding: 0; list-style: none; display: grid; gap: 5px; }
+.candidate-copy li { position: relative; padding-left: 15px; color: var(--text); font-size: .72rem; line-height: 1.35; }
+.candidate-copy li::before { content: "✓"; position: absolute; left: 0; color: var(--teal-dark); font-weight: 900; }
 
 /* Photorealistic recruiting imagery */
 .hero-art img,
