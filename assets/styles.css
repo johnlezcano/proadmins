@@ -395,3 +395,60 @@ button, a, input, select, textarea, summary { -webkit-tap-highlight-color: trans
 .process-visual-inner p{margin:0 0 20px;color:var(--muted)}
 .direct-hire-panel{background:linear-gradient(145deg,#f8fbff,#f5f7fa)}
 @media(max-width:760px){.process-visual-panel{min-height:auto}.process-visual-inner{padding:28px}}
+
+/* v5.4 mobile navigation and shortlist fixes */
+.site-header { z-index: 10000; isolation: isolate; }
+
+@media (max-width: 1020px) {
+  .mobile-nav {
+    z-index: 10001;
+    height: calc(100dvh - 78px);
+    max-height: calc(100dvh - 78px);
+    background: #fff;
+    box-shadow: 0 18px 40px rgba(16,37,63,.16);
+    overscroll-behavior: contain;
+  }
+  .mobile-nav.open { display: flex; }
+}
+
+@media (max-width: 720px) {
+  .mobile-nav {
+    top: 72px;
+    height: calc(100dvh - 72px);
+    max-height: calc(100dvh - 72px);
+  }
+
+  /* Keep all candidate details visible on phones instead of squeezing three narrow cards side by side. */
+  .candidate-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .candidate-card {
+    display: grid;
+    grid-template-columns: minmax(108px, 34%) minmax(0, 1fr);
+    align-items: stretch;
+    overflow: hidden;
+  }
+  .candidate-card img {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    aspect-ratio: auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0;
+  }
+  .candidate-copy {
+    min-width: 0;
+    padding: 14px 14px 15px;
+  }
+  .candidate-copy h3 { font-size: .98rem; }
+  .candidate-copy p { font-size: .76rem; }
+  .candidate-copy li { font-size: .72rem; }
+}
+
+@media (max-width: 420px) {
+  .shortlist-panel { padding: 18px; }
+  .candidate-card { grid-template-columns: 104px minmax(0, 1fr); }
+  .candidate-copy { padding: 12px; }
+}

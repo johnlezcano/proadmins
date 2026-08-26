@@ -132,3 +132,8 @@ The footer now uses `assets/capital-generations-logo-white.png`, a transparent w
 - Connected the ProAdmins hiring form to the existing Formspree endpoint `https://formspree.io/f/xjybazzn`.
 - Centered the Email, Phone, WhatsApp, Location, and LinkedIn icons within their contact-page icon boxes.
 - No other site content, imagery, branding, pricing, or layout changes were made in this update.
+
+## v5.4 updates
+- Fixed the mobile navigation overlay so the open menu stays above page content and fills the usable viewport.
+- Fixed the homepage candidate shortlist on mobile so all profile details remain visible.
+- Added the footer line: "Built by humans, with some help from AI."
