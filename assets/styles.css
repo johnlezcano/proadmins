@@ -219,10 +219,11 @@ button, a, input, select, textarea, summary { -webkit-tap-highlight-color: trans
 .contact-grid { display: grid; grid-template-columns: minmax(0,.85fr) minmax(480px,1.15fr); gap: 52px; align-items: start; }
 .contact-list { margin-top: 26px; display: grid; gap: 11px; }
 .contact-item { display: grid; grid-template-columns: 46px 1fr; gap: 13px; align-items: center; padding: 12px; border: 1px solid var(--line); border-radius: 16px; background: #fff; }
-.contact-item .icon-box { width: 42px; height: 42px; border-radius: 12px; }
-.contact-item strong, .contact-item span { display: block; }
+.contact-item .icon-box { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; justify-self: center; align-self: center; line-height: 0; }
+.contact-item .icon-box svg { display: block; width: 23px; height: 23px; margin: 0; }
+.contact-item > span:not(.icon-box), .contact-item strong, .contact-item > span:not(.icon-box) > span { display: block; }
 .contact-item strong { color: var(--navy); font-size: .9rem; }
-.contact-item span span { color: var(--text); font-size: .88rem; }
+.contact-item > span:not(.icon-box) > span { color: var(--text); font-size: .88rem; }
 .contact-form { border: 1px solid #c7dcec; border-radius: 28px; padding: 32px; background: #fff; box-shadow: var(--shadow); }
 .contact-form h2 { margin: 0; font-size: 2rem; letter-spacing: -.03em; }
 .contact-form > p { margin: 8px 0 24px; color: var(--text); }

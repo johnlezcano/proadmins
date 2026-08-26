@@ -67,23 +67,11 @@ Connect the repository to Vercel. No build command is required.
 
 Do not point ProAdmins.io to the new Vercel deployment until the preview has been reviewed and all existing email DNS records have been confirmed.
 
-## Contact form setup still required
+## Contact form
 
-The form layout, validation, success state and error state are built. The external endpoint is intentionally blank because a ProAdmins Formspree endpoint has not been supplied yet.
+The lead form is connected to the existing Capital Generations Formspree endpoint at `https://formspree.io/f/xjybazzn`. Client-side validation plus success and error states are enabled.
 
-Open:
-
-`contact/index.html`
-
-Find:
-
-```
-data-endpoint=""
-```
-
-Replace it with the actual Formspree endpoint.
-
-Until an endpoint is connected, the form displays a message directing visitors to contact@proadmins.io, (631) 877-1393 or WhatsApp.
+After deployment, submit one live test request and confirm it arrives through Formspree.
 
 ## Google Analytics
 
@@ -113,7 +101,7 @@ ProAdmins remains the primary brand. Capital Generations appears as the parent b
 ## Production checks
 
 1. Review the Vercel preview on desktop, tablet and mobile.
-2. Connect and test Formspree.
+2. Test the live ProAdmins form submission after deployment.
 3. Confirm the ProAdmins business email provider and preserve every email DNS record.
 4. Add Google Analytics if desired.
 5. Verify Search Console and submit the sitemap after launch.
@@ -137,3 +125,10 @@ This build uses the 11 user supplied website images in `assets/photos/`. Each ph
 ## v5.2 footer brand update
 
 The footer now uses `assets/capital-generations-logo-white.png`, a transparent white Capital Generations logo designed for the dark navy footer. The existing blue Capital Generations logo remains available for light backgrounds.
+
+
+## v5.3 update
+
+- Connected the ProAdmins hiring form to the existing Formspree endpoint `https://formspree.io/f/xjybazzn`.
+- Centered the Email, Phone, WhatsApp, Location, and LinkedIn icons within their contact-page icon boxes.
+- No other site content, imagery, branding, pricing, or layout changes were made in this update.
