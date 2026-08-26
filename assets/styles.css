@@ -249,8 +249,8 @@ button, a, input, select, textarea, summary { -webkit-tap-highlight-color: trans
 .footer-col a:hover { color: #fff; }
 .footer-parent { margin-top: 38px; padding: 22px 0; display: flex; align-items: center; gap: 17px; border-top: 1px solid rgba(255,255,255,.11); border-bottom: 1px solid rgba(255,255,255,.11); flex-wrap: wrap; }
 .footer-parent > span { color: #aebed0; font-size: .84rem; font-weight: 700; }
-.footer-parent a { padding: 8px 12px; border-radius: 12px; background: #fff; }
-.footer-parent img { width: 172px; }
+.footer-parent a { padding: 0; border-radius: 0; background: transparent; display: inline-flex; align-items: center; }
+.footer-parent img { width: 190px; height: auto; display: block; }
 .footer-bottom { padding-top: 20px; display: flex; justify-content: space-between; gap: 18px; color: #8398ad; font-size: .78rem; }
 .not-found { min-height: 65vh; padding: 110px 0; display: grid; place-items: center; text-align: center; }
 .not-found h1 { margin: 0; color: var(--blue); font-size: 7rem; line-height: .8; }

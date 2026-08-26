@@ -132,3 +132,8 @@ This package keeps the approved ProAdmins logo, existing ProAdmins color system,
 
 ## Approved image set
 This build uses the 11 user supplied website images in `assets/photos/`. Each photograph is used once only. No AI generated placeholder photography is included in the site.
+
+
+## v5.2 footer brand update
+
+The footer now uses `assets/capital-generations-logo-white.png`, a transparent white Capital Generations logo designed for the dark navy footer. The existing blue Capital Generations logo remains available for light backgrounds.
