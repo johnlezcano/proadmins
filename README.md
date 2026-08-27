@@ -137,3 +137,9 @@ The footer now uses `assets/capital-generations-logo-white.png`, a transparent w
 - Fixed the mobile navigation overlay so the open menu stays above page content and fills the usable viewport.
 - Fixed the homepage candidate shortlist on mobile so all profile details remain visible.
 - Added the footer line: "Built by humans, with some help from AI."
+
+## v5.5 changes
+
+- Set the official public ProAdmins email to `support@proadmins.io` across the site.
+- Added Google Analytics 4 tracking with Measurement ID `G-048VBR4MG5` to every HTML page.
+- All v5.4 mobile navigation, mobile candidate card, footer, Formspree, image, and design fixes are preserved.
